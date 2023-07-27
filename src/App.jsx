@@ -5,12 +5,12 @@ import Authenticate from './components/Authenticate.jsx'
 import SignUpForm from './components/SignUpForm.jsx'
 
 function App() {
-  //const [count, setCount] = useState(0)
+  const [token, setToken] = useState(null)
 
   return (
     <>
-      <Authenticate />
-      <SignUpForm />
+      <Authenticate token={token} setToken={setToken}/>
+      <SignUpForm token={token} setToken={setToken}/>
     </>
   )
 }
